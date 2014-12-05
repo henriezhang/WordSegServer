@@ -1,0 +1,1137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="541be731-dc22-4479-b24f-d901d33097e2" name="Default" comment="" />
+    <ignored path="WordSegServer.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382183977969" ignored="false" />
+    <file path="/WordSegServer.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808003655" ignored="false" />
+    <file path="/HttpWordSegPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383797942352" ignored="false" />
+    <file path="/HttpWordSegServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384230296296" ignored="false" />
+    <file path="C:/apache-maven-3.1.0/conf/settings.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381741210498" ignored="false" />
+    <file path="$USER_HOME$/.m2/settings.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381735879825" ignored="false" />
+    <file path="/AnsjWordSegmenter.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383983211241" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/IDFCaculater.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381836909276" ignored="false" />
+    <file path="/IDFCaculater.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381836908230" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/My_TDIF.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381837001200" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/CreateSequenceFile.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381837502802" ignored="false" />
+    <file path="/CreateSequenceFile.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1381837501232" ignored="false" />
+    <file path="/PostClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383530949491" ignored="false" />
+    <file path="/EchoHttpPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382193837821" ignored="false" />
+    <file path="/PrintContextHttpHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382192668333" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/tunnel/LocalEchoServerRegistration.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382184098986" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/tunnel/HttpTunnelingClientExample.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382184098986" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/file/HttpStaticFileServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382184098986" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/echo/EchoServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382184098986" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/handler/codec/http/multipart/HttpPostRequestEncoder.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/snoop/HttpSnoopServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382184098986" ignored="false" />
+    <file path="/*.regexp" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382206787655" ignored="false" />
+    <file path="/CommandFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384423462328" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/handler/codec/http/HttpClientCodec.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382185759674" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/echo/EchoClientHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382186094950" ignored="false" />
+    <file path="/PrintRawHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382192741579" ignored="false" />
+    <file path="/KeywordExtractCommand.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384342076107" ignored="false" />
+    <file path="/DummyFile.xpath" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382193476424" ignored="false" />
+    <file path="/WordSegCommand.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384161545545" ignored="false" />
+    <file path="/*.txt" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382197860658" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/upload/HttpUploadClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/websocketx/server/WebSocketServerPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/handler/stream/ChunkedInput.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/channel/Channel.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/channel/AbstractChannel.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/channel/Channels.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/upload/HttpUploadClientHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/upload/HttpUploadServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205451231" ignored="false" />
+    <file path="$PROJECT_DIR$/../netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/websocketx/server/WebSocketServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382205443531" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/bin/hbase-config.sh" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-common/src/main/java/org/apache/hadoop/hbase/KeyValue.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382319252746" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredTaskImpl.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382319252746" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/bin/start-hbase.sh" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382319252746" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/main/java/org/apache/hadoop/hbase/monitoring/MonitoredTask.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1382319252746" ignored="false" />
+    <file path="/a.dummy" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383540586717" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/PropertyMinerJob.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383648180598" ignored="false" />
+    <file path="/PropertyMinerJob.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168205216" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383541504593" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/WordSegClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383648123875" ignored="false" />
+    <file path="/WordSegClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384167351727" ignored="false" />
+    <file path="E:/source code/netty-3.7.0.Final-dist/netty-3.7.0.Final/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383530824735" ignored="false" />
+    <file path="E:/source code/netty-3.7.0.Final-dist/netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/upload/HttpUploadClientPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383530824735" ignored="false" />
+    <file path="E:/source code/netty-3.7.0.Final-dist/netty-3.7.0.Final/src/main/java/org/jboss/netty/example/http/upload/HttpUploadClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383530824735" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/WordSegServerFinder.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383531607014" ignored="false" />
+    <file path="/WordSegServerFinder.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383532166573" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/WordSegServerLocator.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383644694517" ignored="false" />
+    <file path="$PROJECT_DIR$/../httpcomponents-client-4.2.6/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383533440446" ignored="false" />
+    <file path="$PROJECT_DIR$/../httpcomponents-client-4.2.6/httpclient/src/examples/org/apache/http/examples/client/ClientFormLogin.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383533440446" ignored="false" />
+    <file path="$PROJECT_DIR$/../httpcomponents-client-4.2.6/httpclient/src/examples/org/apache/http/examples/client/QuickStart.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383533563855" ignored="false" />
+    <file path="/QuickStart.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383533554971" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/main/java/org/apache/hadoop/hbase/zookeeper/RegionServerTracker.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/main/java/org/apache/hadoop/hbase/procedure/Procedure.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-client/src/main/java/org/apache/hadoop/hbase/zookeeper/ZKUtil.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/main/java/org/apache/hadoop/hbase/ipc/RpcCallContext.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383534300965" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-client/src/main/java/org/apache/hadoop/hbase/zookeeper/RecoverableZooKeeper.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/LocationDictionary.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383638900562" ignored="false" />
+    <file path="$PROJECT_DIR$/../hive-0.11.0/src/serde/src/java/org/apache/hadoop/hive/serde2/lazy/LazySimpleSerDe.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383540870104" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/resources/wordsegservers" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383546838571" ignored="false" />
+    <file path="/fragment.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384161390466" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/test/java/com/qq/tubd/PropertyMinerJobTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383637126620" ignored="false" />
+    <file path="/PropertyMinerJobTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383637100516" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/test/java/com/qq/tubd/LocationDictionaryTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383546437955" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/TFIDFCalculator.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383981159813" ignored="false" />
+    <file path="/PlaceExtractCommand.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384161938384" ignored="false" />
+    <file path="/KeywordExtractCommandTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384163000939" ignored="false" />
+    <file path="/Command.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384160709519" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/test/java/com/qq/tubd/WordSegClientTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383650314666" ignored="false" />
+    <file path="/WordSegClientTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383650314363" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/com/qq/tubd/ToponymyKeeper.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383641107367" ignored="false" />
+    <file path="/ToponymyKeeper.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168015981" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/test/java/com/qq/tubd/ToponymyKeeperTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383641334540" ignored="false" />
+    <file path="/ToponymyKeeperTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383641325633" ignored="false" />
+    <file path="/WordSegServerLocator.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383644567303" ignored="false" />
+    <file path="/TFIDFCalculator.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384154174874" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/KeyWord.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383650119282" ignored="false" />
+    <file path="/KeyWord.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383801305199" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383644829892" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentMingProperty/src/main/java/test/com/qq/tubd/WordSegClientTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383648151232" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383797822351" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/HttpWordSegServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383797996781" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/HttpWordSegPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383797942352" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/WordSegServer.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808003655" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/DocumentSimilaryityPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383798279959" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/DocumentServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383798023852" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/DocumentSimilarityServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383805029915" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383799583269" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/core/src/main/java/org/apache/mahout/math/hadoop/similarity/cooccurrence/measures/CosineSimilarity.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383799657878" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/core/src/main/java/org/apache/mahout/common/distance/CosineDistanceMeasure.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383799707799" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/math/src/main/java/org/apache/mahout/math/Vector.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383799829346" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/math/src/main/java/org/apache/mahout/math/ConstantVector.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383799884062" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/CosineDistanceMeasure.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383802473435" ignored="false" />
+    <file path="/CosineDistanceMeasure.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383802418676" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/KeyWord.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383801310498" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/core/src/test/java/org/apache/mahout/common/distance/CosineDistanceMeasureTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383800280141" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/math/src/main/java/org/apache/mahout/math/DenseVector.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383800294074" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/math/src/main/java/org/apache/mahout/math/NamedVector.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383800909099" ignored="false" />
+    <file path="$PROJECT_DIR$/../mahout-distribution-0.8/math/src/main/java/org/apache/mahout/math/OrderedIntDoubleMapping.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383800940533" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/UrlInfo.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383889526749" ignored="false" />
+    <file path="/UrlInfo.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383805526795" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/test/java/com/qq/servers/CosineDistanceMeasureTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383804319874" ignored="false" />
+    <file path="/CosineDistanceMeasureTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383804307226" ignored="false" />
+    <file path="/DocumentSimilarityServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383804811696" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/UrlStateHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383893558699" ignored="false" />
+    <file path="/UrlStateHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383892982816" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/.idea/workspace.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808377691" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/DocumentSimilarityServer.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808004944" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/bin/bigdata" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808025336" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/conf/log4j.properties" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808349746" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/test/java/org/apache/hadoop/hbase/filter/TestBitComparator.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/test/java/org/apache/hadoop/hbase/filter/TestColumnPaginationFilter.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../hbase-0.95.2-src/hbase-0.95.2/hbase-server/src/test/java/org/apache/hadoop/hbase/TestRegionRebalancing.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808412645" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/conf/bigdata-env.sh" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383808876680" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/KeywordSimilarityServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383892926979" ignored="false" />
+    <file path="/KeywordSimilarityServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384345069049" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/KeywordSimilarityPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383892919676" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/KeywordSimilarityServer.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383889268699" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/RedisClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383894640356" ignored="false" />
+    <file path="/RedisClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383894220924" ignored="false" />
+    <file path="$PROJECT_DIR$/../DocumentSimilarityServer/src/main/java/com/qq/servers/UrlGlobalState.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383893831865" ignored="false" />
+    <file path="/UrlGlobalState.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383893828934" ignored="false" />
+    <file path="/KeywordSimilarityPipelineFactory.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383892769503" ignored="false" />
+    <file path="/JsonTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384342842073" ignored="false" />
+    <file path="/CompoundCommand.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384163720806" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/resources/weight.properties" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383980595024" ignored="false" />
+    <file path="/weight.properties" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383980593355" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/Weigher.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383980868305" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/Weigher.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383980877442" ignored="false" />
+    <file path="$PROJECT_DIR$/../IDFProducer/src/main/java/com/tencent/wordseg/Weight.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383980947616" ignored="false" />
+    <file path="/Weight.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1383989570304" ignored="false" />
+    <file path="/Fragment.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384067063581" ignored="false" />
+    <file path="/CommandExecutor.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384344280021" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384151149560" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/JsonTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384151170213" ignored="false" />
+    <file path="/WordSegTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384422418699" ignored="false" />
+    <file path="/CommandUtils.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384318928316" ignored="false" />
+    <file path="/BasicCommand.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384162028675" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/WordSegClient.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384167377953" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/ToponymyKeeper.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384167503938" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/PropertyMinerJob.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168227634" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/ToponymyManager.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168028421" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/test/java/com/qq/tubd/ToponymyManagerTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384167564025" ignored="false" />
+    <file path="E:/workspace/DocumentMingProperty/src/main/java/com/qq/tubd/LocationDictionary.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168668070" ignored="false" />
+    <file path="/LocationDictionary.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384168662185" ignored="false" />
+    <file path="E:/workspace/ReadPgvStorm/src/main/java/com/qq/pgv/Url2Redis.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384238824426" ignored="false" />
+    <file path="/MathTest.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384339678478" ignored="false" />
+    <file path="E:/workspace/DocumentSimilarityServer/src/main/java/com/qq/servers/KeywordSimilarityServerHandler.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384345983886" ignored="false" />
+    <file path="E:/workspace/DocumentSimilarityServer/pom.xml" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384342597618" ignored="false" />
+    <file path="/QQNumberFilter.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384345333403" ignored="false" />
+    <file path="E:/workspace/PigUdf/src/main/java/com/qq/pig/udf/QQNumberFilter.java" changelist="541be731-dc22-4479-b24f-d901d33097e2" time="1384345335131" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="Commander">
+    <leftPanel />
+    <rightPanel />
+    <splitter proportion="0.5" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="WordSegServer" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="WordSegTest.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/qq/servers/WordSegTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="49" column="113" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QueryStringDecoder.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty/3.7.0.Final/netty-3.7.0.Final-sources.jar!/org/jboss/netty/handler/codec/http/QueryStringDecoder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="242" column="37" selection-start="7981" selection-end="7981" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#14873#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#11608#11640#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Character.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.6.0_45/src.zip!/java/lang/Character.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="31" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#0#217180#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UrlEncodedFormEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.3/httpclient-4.3-sources.jar!/org/apache/http/client/entity/UrlEncodedFormEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="56" column="11" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Object.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://D:/Java/jdk1.6.0_45/src.zip!/java/lang/Object.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="217" column="25" selection-start="10311" selection-end="10342" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KeywordExtractCommand.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/KeywordExtractCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="92" column="83" selection-start="2565" selection-end="2565" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HttpWordSegServerHandler.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/HttpWordSegServerHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="58" column="49" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandFactory.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/CommandFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="74" selection-start="2922" selection-end="2922" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordSegServer.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="35" column="66" selection-start="831" selection-end="831" vertical-scroll-proportion="0.8495868">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WordSegmenter.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegmenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="17" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/Command.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/tfidfproducer/TFIDFCalculator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/PlaceExtractCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegCommand.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qq/servers/KeywordExtractCommandTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/CompoundCommand.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/HttpWordSegServerHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/BasicCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/CommandUtils.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qq/servers/MathTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/KeywordExtractCommand.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/JsonTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/qq/servers/WordSegTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/qq/servers/CommandFactory.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WordSegServer" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="WordSegServer" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="Lifecycle" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$LifecycleNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="servers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WordSegServer" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conf" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.qq.servers" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\微云网盘\38113179\WordSegServer\src\main\resources" />
+      <recent name="E:\workspace\WordSegServer\src\main\java\com\qq\servers\tfidfproducer\io" />
+      <recent name="E:\workspace\WordSegServer\src\main\java\com\qq\servers\tfidfproducer" />
+      <recent name="E:\workspace\WordSegServer\conf" />
+      <recent name="E:\workspace\WordSegServer\bin" />
+    </key>
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="com.qq.servers.CommandUtils" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.WordSegServer">
+    <configuration default="false" name="KeywordExtractCommandTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <module name="WordSegServer" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.qq.servers" />
+      <option name="MAIN_CLASS_NAME" value="com.qq.servers.KeywordExtractCommandTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="JsonTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.qq.servers.JsonTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="WordSegServer" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WordSegTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.qq.servers.WordSegTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="WordSegServer" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WordSegServer" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.qq.servers.WordSegServer" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="WordSegServer" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="MathTest" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="com.qq.servers.MathTest" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="WordSegServer" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.KeywordExtractCommandTest" />
+      <item index="1" class="java.lang.String" itemvalue="Application.JsonTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.WordSegTest" />
+      <item index="3" class="java.lang.String" itemvalue="Application.WordSegServer" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MathTest" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.WordSegTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.WordSegServer" />
+        <item index="2" class="java.lang.String" itemvalue="Application.JsonTest" />
+        <item index="3" class="java.lang.String" itemvalue="Application.MathTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.KeywordExtractCommandTest" />
+      </list>
+    </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="541be731-dc22-4479-b24f-d901d33097e2" name="Default" comment="" />
+      <created>1381554531098</created>
+      <updated>1381554531098</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32903227" sideWeight="0.34364995" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2082658" sideWeight="0.11812298" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="FindBugs-IDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3570634" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25080043" sideWeight="0.7252503" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20170757" sideWeight="0.7252503" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27474973" sideWeight="0.6563501" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2505568" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20597652" sideWeight="0.7074527" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="XPathView.XPathProjectComponent">
+    <history />
+    <find-history />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/JsonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="29" selection-start="1107" selection-end="1107" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qq/servers/PostClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="13" selection-start="985" selection-end="985" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qq/servers/MathTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="128" selection-end="128" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/PlaceExtractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="13" selection-start="614" selection-end="614" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/TestAnsj.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="55" column="33" selection-start="1404" selection-end="1468" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/KeywordExtractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="83" selection-start="2565" selection-end="2565" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.6.0_45/src.zip!/java/lang/Object.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="217" column="25" selection-start="10311" selection-end="10342" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/httpcomponents/httpclient/4.3/httpclient-4.3-sources.jar!/org/apache/http/client/entity/UrlEncodedFormEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="11" selection-start="2192" selection-end="2192" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/Java/jdk1.6.0_45/src.zip!/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="146" column="31" selection-start="6300" selection-end="6300" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#217180#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegmenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="17" selection-start="183" selection-end="183" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty/3.7.0.Final/netty-3.7.0.Final-sources.jar!/org/jboss/netty/handler/codec/http/QueryStringDecoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="242" column="37" selection-start="7981" selection-end="7981" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#0#14873#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#11608#11640#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/qq/servers/WordSegTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="113" selection-start="2112" selection-end="2112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/HttpWordSegServerHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="49" selection-start="1985" selection-end="1985" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/CommandFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="74" selection-start="2922" selection-end="2922" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/qq/servers/WordSegServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="66" selection-start="831" selection-end="831" vertical-scroll-proportion="0.8495868">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>WordSegServer</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ant:ant:1.6.5</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
+
