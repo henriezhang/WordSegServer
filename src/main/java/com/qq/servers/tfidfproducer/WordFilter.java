@@ -6,12 +6,11 @@ package com.qq.servers.tfidfproducer;
  * Date: 13-10-17
  * Time: 下午12:46
  */
-public interface WordFilter
-{
+public interface WordFilter {
 
     /**
-     *
      * based on some strategy to filter word or not
+     *
      * @param word
      * @return true if accept,false otherwise
      */

@@ -13,14 +13,12 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
-public class ArticleProcessorContent
-{
+public class ArticleProcessorContent {
     private static final AnsjWordSegmenter segmenter = new AnsjWordSegmenter();
     private static final Splitter tabSplitter = Splitter.on('\t');
     private static final SimpleDateFormat dataFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 
-    private static String processOneLine(String line) throws ParseException
-    {
+    private static String processOneLine(String line) throws ParseException {
         StringBuilder sb = new StringBuilder();
         List<String> items = tabSplitter.splitToList(line);
         //pubtime,ltitle,infotype,flag,topic,abstract;
@@ -36,12 +34,10 @@ public class ArticleProcessorContent
 //        {
 //            pubTime = String.valueOf(dataFormat.parse(pubTime).getHours());
 //        }
-        if (!Strings.isNullOrEmpty(ltitle))
-        {
+        if (!Strings.isNullOrEmpty(ltitle)) {
             ltitle = wordSegAndTrim(ltitle);
         }
-        if (!Strings.isNullOrEmpty(articleAbstract))
-        {
+        if (!Strings.isNullOrEmpty(articleAbstract)) {
             articleAbstract = wordSegAndTrim(articleAbstract);
         }
         sb.append(appid);
@@ -60,8 +56,7 @@ public class ArticleProcessorContent
         return sb.toString();
     }
 
-    private static String prepareDataForBayes2(String line) throws ParseException
-    {
+    private static String prepareDataForBayes2(String line) throws ParseException {
         StringBuilder sb = new StringBuilder();
 
         List<String> items = tabSplitter.splitToList(line);
@@ -78,12 +73,10 @@ public class ArticleProcessorContent
 //        {
 //            pubTime = String.valueOf(dataFormat.parse(pubTime).getHours());
 //        }
-        if (!Strings.isNullOrEmpty(ltitle))
-        {
+        if (!Strings.isNullOrEmpty(ltitle)) {
             ltitle = wordSegAndTrim(ltitle);
         }
-        if (!Strings.isNullOrEmpty(articleAbstract))
-        {
+        if (!Strings.isNullOrEmpty(articleAbstract)) {
             articleAbstract = wordSegAndTrim(articleAbstract);
         }
         sb.append(clickThrough);
@@ -102,24 +95,20 @@ public class ArticleProcessorContent
         return sb.toString();
     }
 
-    private static String normalizeTopic(String topic)
-    {
+    private static String normalizeTopic(String topic) {
         StringBuilder sb = new StringBuilder();
-        for (String wordAndWeight : Splitter.on(",").split(topic))
-        {
+        for (String wordAndWeight : Splitter.on(",").split(topic)) {
             sb.append(wordAndWeight.split(":")[0]);
             sb.append(" ");
         }
-        if (sb.length() > 0)
-        {
+        if (sb.length() > 0) {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
     }
 
 
-    private static String prepareDataForBayes(String line) throws ParseException
-    {
+    private static String prepareDataForBayes(String line) throws ParseException {
         StringBuilder sb = new StringBuilder();
 
         String[] tmp = line.split("\t");
@@ -137,32 +126,27 @@ public class ArticleProcessorContent
     }
 
 
-    public static String wordSegAndTrim(String line)
-    {
+    public static String wordSegAndTrim(String line) {
         List<Term> words = segmenter.segmentWord(line, false);
 //        Joiner joiner = Joiner.on(" ");
         StringBuilder sb = new StringBuilder();
-        for (Term term : words)
-        {
+        for (Term term : words) {
             String word = term.getName();
             int index = word.indexOf("/");
-            if (index >= 0)
-            {
+            if (index >= 0) {
                 word = word.substring(0, index);
             }
             sb.append(word);
             sb.append(" ");
         }
 
-        if (sb.length() > 0)
-        {
+        if (sb.length() > 0) {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
     }
 
-    public static String getKeyWord(String line)
-    {
+    public static String getKeyWord(String line) {
 
         KeywordExtractCommand command = new KeywordExtractCommand("", line, "default", 20, false);
         CommandExecutor executor = new CommandExecutor();
@@ -171,37 +155,31 @@ public class ArticleProcessorContent
         List<Term> words = segmenter.segmentWord(line, false);
 //        Joiner joiner = Joiner.on(" ");
         StringBuilder sb = new StringBuilder();
-        for (Term term : words)
-        {
+        for (Term term : words) {
             String word = term.getName();
             int index = word.indexOf("/");
-            if (index >= 0)
-            {
+            if (index >= 0) {
                 word = word.substring(0, index);
             }
             sb.append(word);
             sb.append(" ");
         }
 
-        if (sb.length() > 0)
-        {
+        if (sb.length() > 0) {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
     }
 
 
-    public static void ProcessOneLineTest() throws ParseException
-    {
+    public static void ProcessOneLineTest() throws ParseException {
         String data = "";
         System.out.println(processOneLine(data));
 
     }
 
-    public static void main(String[] args) throws IOException
-    {
-        if (args.length < 2)
-        {
+    public static void main(String[] args) throws IOException {
+        if (args.length < 2) {
             System.out.println("Usage : <file name> <output file name>");
             return;
         }
@@ -212,27 +190,20 @@ public class ArticleProcessorContent
         String line;
 
 
-        try
-        {
-            while ((line = reader.readLine()) != null)
-            {
-                try
-                {
+        try {
+            while ((line = reader.readLine()) != null) {
+                try {
                     String str = prepareDataForBayes(line);
 //                    String str = prepareDataForBayes2(line);
                     if (str == null)
                         continue;
                     writer.write(str);
-                }
-                catch (ParseException e)
-                {
+                } catch (ParseException e) {
                     continue;
                 }
                 writer.newLine();
             }
-        }
-        finally
-        {
+        } finally {
             Closeables.close(writer, true);
             Closeables.close(reader, true);
         }

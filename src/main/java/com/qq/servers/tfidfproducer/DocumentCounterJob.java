@@ -26,57 +26,18 @@ import java.io.IOException;
  * <p/>
  * line counter of text file
  */
-public class DocumentCounterJob extends Configured implements Tool
-{
+public class DocumentCounterJob extends Configured implements Tool {
 
 
-    public static class DocumentCounterJobMapper extends Mapper<LongWritable, Text, Text, LongWritable>
-    {
-
-        private static Text KEY = new Text("key");
-        private long count = 0;
-
-        @Override
-        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
-        {
-            count++;
-            //TODO
-            //need to report progress status
-        }
-
-        @Override
-        protected void cleanup(Context context) throws IOException, InterruptedException
-        {
-            context.write(KEY, new LongWritable(count));
-        }
-
+    public static void main(String args[]) throws Exception {
+        ToolRunner.run(new Configuration(), new DocumentCounterJob(), args);
     }
-
-
-    public static class DocumentCounterJobReducer extends Reducer<Text, LongWritable, Text, LongWritable>
-    {
-        @Override
-        protected void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException
-        {
-            //there is only one key, following code should run one time.
-            long sum = 0;
-            for (LongWritable value : values)
-            {
-                sum += value.get();
-            }
-
-            context.write(new Text(""), new LongWritable(sum));
-        }
-    }
-
 
     @Override
-    public int run(String[] args) throws Exception
-    {
+    public int run(String[] args) throws Exception {
         Configuration conf = getConf();
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length != 2)
-        {
+        if (otherArgs.length != 2) {
             System.err.println("Usage: DocumentCounter  <InputDir> <OutputDir>");
             System.exit(2);
         }
@@ -104,8 +65,35 @@ public class DocumentCounterJob extends Configured implements Tool
         return 0;
     }
 
-    public static void main(String args[]) throws Exception
-    {
-        ToolRunner.run(new Configuration(), new DocumentCounterJob(), args);
+    public static class DocumentCounterJobMapper extends Mapper<LongWritable, Text, Text, LongWritable> {
+
+        private static Text KEY = new Text("key");
+        private long count = 0;
+
+        @Override
+        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            count++;
+            //TODO
+            //need to report progress status
+        }
+
+        @Override
+        protected void cleanup(Context context) throws IOException, InterruptedException {
+            context.write(KEY, new LongWritable(count));
+        }
+
+    }
+
+    public static class DocumentCounterJobReducer extends Reducer<Text, LongWritable, Text, LongWritable> {
+        @Override
+        protected void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException {
+            //there is only one key, following code should run one time.
+            long sum = 0;
+            for (LongWritable value : values) {
+                sum += value.get();
+            }
+
+            context.write(new Text(""), new LongWritable(sum));
+        }
     }
 }

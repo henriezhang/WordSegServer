@@ -13,8 +13,7 @@ import java.util.Map;
  * <p/>
  * utility methods to facilitate common command manipulation.
  */
-public class CommandUtils
-{
+public class CommandUtils {
 
     /**
      * get parameter shared by all command.
@@ -22,17 +21,14 @@ public class CommandUtils
      * @param parameters parameter in decoded from url query string
      * @return a list contains title, followed by content.
      */
-    public static List<String> getCommonContent(Map<String, List<String>> parameters)
-    {
+    public static List<String> getCommonContent(Map<String, List<String>> parameters) {
         List<String> contents = Lists.newArrayList();
         List<String> title = parameters.get(Command.TITLE_KEY);
-        if (title != null)
-        {
+        if (title != null) {
             contents.add(title.get(0));
         }
         List<String> content = parameters.get(Command.CONTENT_KEY);
-        if (content != null)
-        {
+        if (content != null) {
             contents.add(content.get(0));
         }
         return contents;

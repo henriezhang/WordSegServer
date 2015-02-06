@@ -29,172 +29,42 @@ import java.util.Set;
  * Date: 13-10-15
  * Time: 下午6:05
  */
-public class IDFCalculator extends Configured implements Tool
-{
+public class IDFCalculator extends Configured implements Tool {
 
     private static String IDS_CALCULATOR_DOCUMENT_COUNT_KEY = "idf.calculator.document.count.key";
 
     private static String IDF_CALCULATOR_DOMAIN_FILTER_KEY = "idf.calculator.domain.filter.key";
 
 
-    public static void setDomain(Configuration conf, String domain)
-    {
+    public static void setDomain(Configuration conf, String domain) {
         conf.set(IDF_CALCULATOR_DOMAIN_FILTER_KEY, domain);
     }
 
-    public static String getDomain(Configuration conf)
-    {
+    public static String getDomain(Configuration conf) {
         return conf.get(IDF_CALCULATOR_DOMAIN_FILTER_KEY, "");
     }
 
-    public static void setDocumentCount(Configuration conf, long count)
-    {
+    public static void setDocumentCount(Configuration conf, long count) {
         conf.setLong(IDS_CALCULATOR_DOCUMENT_COUNT_KEY, count);
     }
 
-    public static long getDocumentCount(Configuration conf)
-    {
+    public static long getDocumentCount(Configuration conf) {
         return conf.getLong(IDS_CALCULATOR_DOCUMENT_COUNT_KEY, 0);
     }
 
-
-    //prerequisite:
-    //we are assuming each document are unique,documents come from our own database.
-    public static class IDFCalculatorMapper extends Mapper<LongWritable, Text, Text, LongWritable>
-    {
-        private final DocumentParser docParser = new DocumentParser();
-        private Set<String> uniqueWordsInOneDocument = new HashSet<String>();
-
-        enum MyCounter
-        {
-            badrecord,
-            totalrecord
-        }
-
-        //for use
-        private Text reuse = new Text();
-        private final static LongWritable one = new LongWritable(1);
-
-        private WordFilter filter = new MeanWordFilter();
-        private DocumentParser.Filter domainFilter;
-        private static final DocumentParser.Filter ACCEPT_ALL_FILTER = new DocumentParser.Filter()
-        {
-            @Override
-            public boolean accept(String url)
-            {
-                return true;
-            }
-        };
-
-
-        @Override
-        protected void setup(Context context) throws IOException, InterruptedException
-        {
-            final String domain = getDomain(context.getConfiguration());
-            if (domain.equals(""))
-            {
-                domainFilter = ACCEPT_ALL_FILTER;
-            }
-            else
-            {
-                domainFilter = new DocumentParser.Filter()
-                {
-                    @Override
-                    public boolean accept(String url)
-                    {
-                        return url.startsWith(domain);
-                    }
-                };
-            }
-        }
-
-        //one document per line
-        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
-        {
-            context.getCounter(MyCounter.totalrecord).increment(1);
-            uniqueWordsInOneDocument.clear();
-            List<String> sentences = null;
-            try
-            {
-                //FIXME
-                sentences = docParser.extractMainBodyFromJson(value, domainFilter);
-            }
-            catch (IOException e)
-            {
-                context.getCounter(MyCounter.badrecord).increment(1);
-                return;
-            }
-            if (sentences.size() == 0)
-            {
-                return;
-            }
-            //1. get unique words in one document
-            for (String sentence : sentences)
-            {
-                List<Term> parsed = ToAnalysis.parse(sentence);
-                for (Term term : parsed)
-                {
-                    if (filter.accept(term))
-                    {
-                        uniqueWordsInOneDocument.add(term.getName().trim());
-                    }
-                }
-            }
-            //2. for each unique word emit a key-value
-            for (String word : uniqueWordsInOneDocument)
-            {
-                reuse.set(word);
-                context.write(reuse, one);
-            }
-        }
-
+    public static void main(String args[]) throws Exception {
+        //maybe need pre-processing.
+        int res = ToolRunner.run(new Configuration(), new IDFCalculator(), args);
     }
-
-
-    public static class IDFCalculatorReducer
-            extends Reducer<Text, LongWritable, Text, DoubleWritable>
-    {
-
-        private double documentCount;
-
-        @Override
-        protected void setup(Context context) throws IOException, InterruptedException
-        {
-            documentCount = (double) IDFCalculator.getDocumentCount(context.getConfiguration());
-        }
-
-        private DoubleWritable result = new DoubleWritable();
-
-        public void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException
-        {
-            long sum = 0;
-            for (LongWritable val : values)
-            {
-                sum += val.get();
-            }
-
-            result.set(computeIDF(sum));
-            context.write(key, result);
-        }
-
-        private double computeIDF(long docFrequency)
-        {
-            return Math.log(documentCount / (1 + docFrequency));
-        }
-    }
-
 
     @Override
-    public int run(String[] args) throws Exception
-    {
+    public int run(String[] args) throws Exception {
         Configuration conf = getConf();
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length < 3)
-        {
+        if (otherArgs.length < 3) {
             System.err.println("other argument length:" + otherArgs.length);
             System.out.println("#");
-            for (String arg : otherArgs)
-            {
+            for (String arg : otherArgs) {
                 System.err.println(arg);
             }
             System.out.println("#");
@@ -205,8 +75,7 @@ public class IDFCalculator extends Configured implements Tool
         String strInput = otherArgs[1];
         String strOutput = otherArgs[2];
 
-        if (otherArgs.length >= 4)
-        {
+        if (otherArgs.length >= 4) {
             String domain = otherArgs[3];
             setDomain(conf, domain);
         }
@@ -229,12 +98,10 @@ public class IDFCalculator extends Configured implements Tool
 
         //command line argument take precedence over hard code value
 
-        if (job.getConfiguration().getLong("mapred.max.split.size", -1) == -1)
-        {
+        if (job.getConfiguration().getLong("mapred.max.split.size", -1) == -1) {
             FileInputFormat.setMaxInputSplitSize(job, 500 * 1024 * 1024L);
         }
-        if (job.getConfiguration().getLong("mapred.min.split.size", -1) == -1)
-        {
+        if (job.getConfiguration().getLong("mapred.min.split.size", -1) == -1) {
             FileInputFormat.setMinInputSplitSize(job, 256 * 1024 * 1024L);
         }
 
@@ -249,10 +116,99 @@ public class IDFCalculator extends Configured implements Tool
         return 0;
     }
 
+    //prerequisite:
+    //we are assuming each document are unique,documents come from our own database.
+    public static class IDFCalculatorMapper extends Mapper<LongWritable, Text, Text, LongWritable> {
+        private final static LongWritable one = new LongWritable(1);
+        private static final DocumentParser.Filter ACCEPT_ALL_FILTER = new DocumentParser.Filter() {
+            @Override
+            public boolean accept(String url) {
+                return true;
+            }
+        };
+        private final DocumentParser docParser = new DocumentParser();
+        private Set<String> uniqueWordsInOneDocument = new HashSet<String>();
+        //for use
+        private Text reuse = new Text();
+        private WordFilter filter = new MeanWordFilter();
+        private DocumentParser.Filter domainFilter;
 
-    public static void main(String args[]) throws Exception
-    {
-        //maybe need pre-processing.
-        int res = ToolRunner.run(new Configuration(), new IDFCalculator(), args);
+        @Override
+        protected void setup(Context context) throws IOException, InterruptedException {
+            final String domain = getDomain(context.getConfiguration());
+            if (domain.equals("")) {
+                domainFilter = ACCEPT_ALL_FILTER;
+            } else {
+                domainFilter = new DocumentParser.Filter() {
+                    @Override
+                    public boolean accept(String url) {
+                        return url.startsWith(domain);
+                    }
+                };
+            }
+        }
+
+        //one document per line
+        public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            context.getCounter(MyCounter.totalrecord).increment(1);
+            uniqueWordsInOneDocument.clear();
+            List<String> sentences = null;
+            try {
+                //FIXME
+                sentences = docParser.extractMainBodyFromJson(value, domainFilter);
+            } catch (IOException e) {
+                context.getCounter(MyCounter.badrecord).increment(1);
+                return;
+            }
+            if (sentences.size() == 0) {
+                return;
+            }
+            //1. get unique words in one document
+            for (String sentence : sentences) {
+                List<Term> parsed = ToAnalysis.parse(sentence);
+                for (Term term : parsed) {
+                    if (filter.accept(term)) {
+                        uniqueWordsInOneDocument.add(term.getName().trim());
+                    }
+                }
+            }
+            //2. for each unique word emit a key-value
+            for (String word : uniqueWordsInOneDocument) {
+                reuse.set(word);
+                context.write(reuse, one);
+            }
+        }
+
+        enum MyCounter {
+            badrecord,
+            totalrecord
+        }
+
+    }
+
+    public static class IDFCalculatorReducer
+            extends Reducer<Text, LongWritable, Text, DoubleWritable> {
+
+        private double documentCount;
+        private DoubleWritable result = new DoubleWritable();
+
+        @Override
+        protected void setup(Context context) throws IOException, InterruptedException {
+            documentCount = (double) IDFCalculator.getDocumentCount(context.getConfiguration());
+        }
+
+        public void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException {
+            long sum = 0;
+            for (LongWritable val : values) {
+                sum += val.get();
+            }
+
+            result.set(computeIDF(sum));
+            context.write(key, result);
+        }
+
+        private double computeIDF(long docFrequency) {
+            return Math.log(documentCount / (1 + docFrequency));
+        }
     }
 }

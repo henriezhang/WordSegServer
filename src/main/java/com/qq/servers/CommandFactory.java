@@ -20,8 +20,7 @@ import java.util.Map;
  * Date: 13-10-19
  * Time: 下午5:06
  */
-public class CommandFactory
-{
+public class CommandFactory {
     private static final Logger LOG = LoggerFactory.getLogger(CommandFactory.class);
 //    public static WordFilter filter = new MeanWordFilter();
 //    public static Weight titleWeight = new Weight.TitleWeight(5, filter);
@@ -30,16 +29,13 @@ public class CommandFactory
 //    public static WordSegmenter segmenter = new AnsjWordSegmenter();
 
 
-    private static Charset getContentCharset(HttpRequest request)
-    {
+    private static Charset getContentCharset(HttpRequest request) {
         String contentType = request.getHeader(HttpHeaders.Names.CONTENT_TYPE);
-        if (contentType == null)
-        {
+        if (contentType == null) {
             return CharsetUtil.UTF_8;
         }
         int indexOfCharset = contentType.indexOf("charset");
-        if (indexOfCharset == -1)
-        {
+        if (indexOfCharset == -1) {
             return CharsetUtil.UTF_8;
         }
         String charsetName = contentType.substring(indexOfCharset + "charset".length() + 1).trim();
@@ -47,21 +43,15 @@ public class CommandFactory
     }
 
 
-    public static Command createCommand(HttpRequest request) throws URISyntaxException
-    {
-        if (request.getMethod().equals(HttpMethod.GET))
-        {
+    public static Command createCommand(HttpRequest request) throws URISyntaxException {
+        if (request.getMethod().equals(HttpMethod.GET)) {
             URI uri = new URI(request.getUri());
             QueryStringDecoder decodeQuery = new QueryStringDecoder(uri);
             Map<String, List<String>> parameters = decodeQuery.getParameters();
             return WordSegCommand.createCommand(parameters);
-        }
-        else
-        {
-            if (request.getMethod().equals(HttpMethod.POST))
-            {
-                if (LOG.isDebugEnabled())
-                {
+        } else {
+            if (request.getMethod().equals(HttpMethod.POST)) {
+                if (LOG.isDebugEnabled()) {
                     LOG.debug("Received request : " + request.toString());
                 }
                 String body = request.getContent().toString(getContentCharset(request));
@@ -74,13 +64,11 @@ public class CommandFactory
 //                    System.out.println(entry.getKey());
 //                }
 
-                if (postParameters.get(Command.OP_CODE_KEY) != null)
-                {
+                if (postParameters.get(Command.OP_CODE_KEY) != null) {
                     String value = postParameters.get(Command.OP_CODE_KEY).get(0);
 
                     //support commands multiplex
-                    if (value.indexOf(",") > 0)
-                    {
+                    if (value.indexOf(",") > 0) {
                         return CompoundCommand.createCommand(postParameters);
                     }
                     return createSingleCommand(value, postParameters);
@@ -90,30 +78,24 @@ public class CommandFactory
         return Command.NULLCommand.get();
     }
 
-    public static Command createSingleCommand(String strOpcode, Map<String, List<String>> postParameters)
-    {
+    public static Command createSingleCommand(String strOpcode, Map<String, List<String>> postParameters) {
         Command.Opcode opcode = Command.Opcode.fromString(strOpcode);
-        if (opcode == null)
-        {
+        if (opcode == null) {
             Command.NULLCommand.get();
         }
 
         Command command = Command.NULLCommand.get();
 
-        switch (opcode)
-        {
-            case KW:
-            {
+        switch (opcode) {
+            case KW: {
                 command = KeywordExtractCommand.createCommand(postParameters);
                 break;
             }
-            case PLACE:
-            {
+            case PLACE: {
                 command = PlaceExtractCommand.createCommand(postParameters);
                 break;
             }
-            case SEGMENT:
-            {
+            case SEGMENT: {
                 command = WordSegCommand.createCommand(postParameters);
                 break;
             }

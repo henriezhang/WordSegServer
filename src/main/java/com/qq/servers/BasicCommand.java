@@ -6,10 +6,8 @@ package com.qq.servers;
  * Date: 13-11-11
  * Time: 下午5:26
  */
-public abstract class BasicCommand implements Command
-{
-    public boolean getAnnotation()
-    {
+public abstract class BasicCommand implements Command {
+    public boolean getAnnotation() {
         return false;
     }
 }

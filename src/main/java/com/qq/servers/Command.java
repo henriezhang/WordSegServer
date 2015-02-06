@@ -13,8 +13,7 @@ import java.util.List;
  * Date: 13-10-19
  * Time: 下午3:33
  */
-public interface Command
-{
+public interface Command {
 
     /**
      * key for specifying operation code
@@ -95,80 +94,62 @@ public interface Command
     public void execute(List<Fragment> fragments, ObjectNode result);
 
 
-    public static enum Opcode
-    {
+    public static enum Opcode {
         PLACE("place"), KW("keyword"), SEGMENT("segment"), COMPOUND("compound");
         private String opcode;
 
-        private Opcode(String opcode)
-        {
+        private Opcode(String opcode) {
             this.opcode = opcode;
         }
 
-        public String getName()
-        {
-            return this.opcode;
-        }
-
-        public static Opcode fromString(String opStr)
-        {
-            for (Opcode opCode : Opcode.values())
-            {
-                if (opCode.getName().equals(opStr))
-                {
+        public static Opcode fromString(String opStr) {
+            for (Opcode opCode : Opcode.values()) {
+                if (opCode.getName().equals(opStr)) {
                     return opCode;
                 }
             }
             return null;
         }
+
+        public String getName() {
+            return this.opcode;
+        }
     }
 
-
-    public static class NULLCommand implements Command
-    {
+    public static class NULLCommand implements Command {
         private static final NULLCommand THIS = new NULLCommand();
         private static final List<Fragment> EMPTY_LIST = Lists.newArrayList();
 
-        public static NULLCommand get()
-        {
+        private NULLCommand() {
+        }
+
+        public static NULLCommand get() {
             return THIS;
         }
 
         @Override
-        public boolean getAnnotation()
-        {
+        public boolean getAnnotation() {
             return false;
         }
 
         @Override
-        public int getPreference()
-        {
+        public int getPreference() {
             return Integer.MAX_VALUE;
         }
 
         @Override
-        public List<Fragment> getFragments(boolean annotation)
-        {
+        public List<Fragment> getFragments(boolean annotation) {
             return EMPTY_LIST;
         }
 
         @Override
-        public void execute(List<Fragment> fragments, ObjectNode place)
-        {
+        public void execute(List<Fragment> fragments, ObjectNode place) {
             //do nothing.
         }
 
-
-        private NULLCommand()
-        {
-        }
-
         @Override
-        public String getName()
-        {
+        public String getName() {
             return "";
         }
     }
-
-
 }

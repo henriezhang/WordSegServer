@@ -10,7 +10,6 @@ import java.util.List;
  * Date: 13-10-13
  * Time: 上午11:03
  */
-public interface WordSegmenter
-{
+public interface WordSegmenter {
     public List<Term> segmentWord(String sentence, boolean annotation);
 }

@@ -11,32 +11,27 @@ import java.util.regex.Pattern;
  * Date: 13-10-18
  * Time: 下午7:03
  */
-public class WordFreFilter implements WordFilter
-{
+public class WordFreFilter implements WordFilter {
 
     private Pattern pattern = Pattern.compile("(?s)\\d.*");
 //    private Pattern pattern = Pattern.compile("(?s)[a-zA-Z_0-9]*");
 
     @Override
-    public boolean accept(Object wordObj)
-    {
+    public boolean accept(Object wordObj) {
         Term word = (Term) wordObj;
 
         Matcher matcher = pattern.matcher(word.getName());
-        if (matcher.matches())
-        {
+        if (matcher.matches()) {
             return false;
         }
 
-        if (word.getName().trim().length() < 2)
-        {
+        if (word.getName().trim().length() < 2) {
             return false;
         }
 
         String wordProperity = word.getNatrue().natureStr;
 
-        if (!wordProperity.startsWith("n"))
-        {
+        if (!wordProperity.startsWith("n")) {
             return false;
         }
 

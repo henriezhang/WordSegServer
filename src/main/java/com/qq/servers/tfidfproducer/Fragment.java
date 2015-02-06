@@ -12,8 +12,7 @@ import java.util.List;
  * <p/>
  * a document consist of different parts, title,sub-title,content,each correspond to a fragment with different weight
  */
-public class Fragment
-{
+public class Fragment {
     /**
      * words produced by word segmenter
      */
@@ -27,15 +26,13 @@ public class Fragment
      */
     public int length;
 
-    public Fragment(List<Term> data, Weight weighter, int length)
-    {
+    public Fragment(List<Term> data, Weight weighter, int length) {
         this.words = data;
         this.weighter = weighter;
         this.length = length;
     }
 
-    public Fragment(List<Term> data, Weight weighter)
-    {
+    public Fragment(List<Term> data, Weight weighter) {
         this(data, weighter, -1);
     }
 }

@@ -16,8 +16,7 @@ import java.util.Hashtable;
 /**
  * Created by antyrao on 14-1-15.
  */
-public class IdfDict
-{
+public class IdfDict {
     private static final Logger LOG = LoggerFactory.getLogger(IdfDict.class);
 
     private static final Charset utf8 = Charset.forName("utf-8");
@@ -29,17 +28,14 @@ public class IdfDict
     protected String idfName;
     protected Double median;
 
-    protected IdfDict(String idfName)
-    {
+    protected IdfDict(String idfName) {
         this.idfName = idfName;
         loadIdf();
     }
 
-    private void loadIdf()
-    {
+    private void loadIdf() {
 
-        try
-        {
+        try {
 //        InputStream is = this.getClass().getClassLoader().getResourceAsStream(idfName);
             InputStream is = IdfDict.class.getClassLoader().getResourceAsStream(idfName);
 
@@ -48,16 +44,13 @@ public class IdfDict
 
             BufferedReader reader = new BufferedReader(new InputStreamReader(is, utf8));
 
-            try
-            {
+            try {
                 double total = 0;
                 int badRecord = 0;
                 String line;
-                while ((line = reader.readLine()) != null)
-                {
+                while ((line = reader.readLine()) != null) {
                     String[] wordAndIdf = line.split(SEPARATOR_REGEX);
-                    if (wordAndIdf.length != 2)
-                    {
+                    if (wordAndIdf.length != 2) {
                         badRecord++;
                         continue;
                     }
@@ -72,50 +65,35 @@ public class IdfDict
                 LOG.info("Successfully load idf dictionary " + idfName + " with total record " + total + " and " +
                         " bad record " + badRecord);
 
-            }
-            catch (IOException e)
-            {
+            } catch (IOException e) {
                 throw new RuntimeException(Throwables.getStackTraceAsString(e), e);
-            }
-            finally
-            {
-                try
-                {
+            } finally {
+                try {
                     reader.close();
-                }
-                catch (IOException ignored)
-                {
+                } catch (IOException ignored) {
                 }
             }
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
 
     }
 
-    private Double computeMedian(Collection<Double> values)
-    {
+    private Double computeMedian(Collection<Double> values) {
         Double[] weights = values.toArray(new Double[values.size()]);
         Arrays.sort(weights);
-        if (weights.length % 2 == 0)
-        {
+        if (weights.length % 2 == 0) {
             return (weights[weights.length / 2] + weights[weights.length / 2 - 1]) / 2;
-        }
-        else
-        {
+        } else {
             return weights[weights.length / 2];
         }
     }
 
-    public Double getIdf(String word)
-    {
+    public Double getIdf(String word) {
         return wordToIdfMap.get(word);
     }
 
-    public Double getMedian()
-    {
+    public Double getMedian() {
         return median;
     }
 

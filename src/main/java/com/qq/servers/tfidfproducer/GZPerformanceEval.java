@@ -26,33 +26,18 @@ import java.io.IOException;
  * <p/>
  * line counter of text file
  */
-public class GZPerformanceEval extends Configured implements Tool
-{
+public class GZPerformanceEval extends Configured implements Tool {
 
 
-    public static class DocumentCounterJobMapper extends Mapper<LongWritable, Text, NullWritable, NullWritable>
-    {
-
-        @Override
-        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
-        {
-        }
-
-        @Override
-        protected void cleanup(Context context) throws IOException, InterruptedException
-        {
-        }
-
+    public static void main(String args[]) throws Exception {
+        ToolRunner.run(new Configuration(), new GZPerformanceEval(), args);
     }
 
-
     @Override
-    public int run(String[] args) throws Exception
-    {
+    public int run(String[] args) throws Exception {
         Configuration conf = getConf();
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length != 2)
-        {
+        if (otherArgs.length != 2) {
             System.err.println("Usage: DocumentCounter  <InputDir> <OutputDir>");
             System.exit(2);
         }
@@ -75,8 +60,15 @@ public class GZPerformanceEval extends Configured implements Tool
         return 0;
     }
 
-    public static void main(String args[]) throws Exception
-    {
-        ToolRunner.run(new Configuration(), new GZPerformanceEval(), args);
+    public static class DocumentCounterJobMapper extends Mapper<LongWritable, Text, NullWritable, NullWritable> {
+
+        @Override
+        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        }
+
+        @Override
+        protected void cleanup(Context context) throws IOException, InterruptedException {
+        }
+
     }
 }

@@ -11,12 +11,10 @@ import java.io.*;
 /**
  * Created by antyrao on 14-6-5.
  */
-public class WordSegTrimFirstField
-{
+public class WordSegTrimFirstField {
 
 
-    public static void process(String dirPath, String outputPath) throws IOException
-    {
+    public static void process(String dirPath, String outputPath) throws IOException {
 
 //        DocumentParser parser = new DocumentParser();
 //        DocumentParser.Filter filter = new DocumentParser.Filter()
@@ -33,15 +31,12 @@ public class WordSegTrimFirstField
         long badRecord = 0;
         ObjectMapper mapper = new ObjectMapper();
 
-        for (File file : dir.listFiles())
-        {
+        for (File file : dir.listFiles()) {
             BufferedReader br = new BufferedReader(new FileReader(file));
             String line;
-            while ((line = br.readLine()) != null)
-            {
+            while ((line = br.readLine()) != null) {
 //                text.set(line);
-                try
-                {
+                try {
 
 //                    List<String> result = parser.extractMainBodyFromJson(text, filter);
 
@@ -53,8 +48,7 @@ public class WordSegTrimFirstField
 //                    }
 
                     String[] data = line.split("\t");
-                    if (data.length != 2)
-                    {
+                    if (data.length != 2) {
                         throw new RuntimeException(line);
                     }
 
@@ -69,9 +63,7 @@ public class WordSegTrimFirstField
                     writer.print("\t");
                     writer.print(nodeToString(node));
                     writer.print("\n");
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     badRecord++;
                 }
             }
@@ -83,23 +75,19 @@ public class WordSegTrimFirstField
 
     }
 
-    private static String nodeToString(ArrayNode node)
-    {
+    private static String nodeToString(ArrayNode node) {
         StringBuilder sb = new StringBuilder();
-        for (JsonNode item : node)
-        {
+        for (JsonNode item : node) {
             sb.append(item.toString().replaceAll("\"", ""));
             sb.append(" ");
         }
-        if (sb.length() > 0)
-        {
+        if (sb.length() > 0) {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
     }
 
-    public static void main(String[] args) throws IOException
-    {
+    public static void main(String[] args) throws IOException {
         String fileFolder = args[0];
         String outputFileName = args[1];
         process(fileFolder, outputFileName);

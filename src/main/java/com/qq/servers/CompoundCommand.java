@@ -16,74 +16,28 @@ import java.util.Map;
  * Date: 13-11-10
  * Time: 下午3:23
  */
-public class CompoundCommand implements Command
-{
-    private static Comparator<Command> comparator = new Comparator<Command>()
-    {
+public class CompoundCommand implements Command {
+    private static Comparator<Command> comparator = new Comparator<Command>() {
         @Override
-        public int compare(Command command1, Command command2)
-        {
+        public int compare(Command command1, Command command2) {
             return Ints.compare(command1.getPreference(), command2.getPreference());
         }
     };
 
     private List<Command> commands;
 
-    public CompoundCommand(List<Command> commands)
-    {
+    public CompoundCommand(List<Command> commands) {
         this.commands = commands;
     }
 
-    @Override
-    public String getName()
-    {
-        return Opcode.COMPOUND.getName();
-    }
-
-    @Override
-    public boolean getAnnotation()
-    {
-        boolean annotation = false;
-        for (Command command : commands)
-        {
-            annotation |= command.getAnnotation();
-        }
-        return annotation;
-    }
-
-    @Override
-    public int getPreference()
-    {
-        return -1;
-    }
-
-    @Override
-    public List<Fragment> getFragments(boolean annotation)
-    {
-        Collections.sort(commands, comparator);
-        return commands.get(0).getFragments(annotation);
-    }
-
-    @Override
-    public void execute(List<Fragment> fragments, ObjectNode result)
-    {
-        for (Command command : commands)
-        {
-            command.execute(fragments, result);
-        }
-    }
-
-    public static CompoundCommand createCommand(Map<String, List<String>> parameters)
-    {
+    public static CompoundCommand createCommand(Map<String, List<String>> parameters) {
         String value = parameters.get(Command.OP_CODE_KEY).get(0);
         String[] strOpcodes = value.split(",");
         List<Command> commands = Lists.newArrayList();
 
-        for (String strOpcode : strOpcodes)
-        {
+        for (String strOpcode : strOpcodes) {
             Command command = CommandFactory.createSingleCommand(strOpcode, parameters);
-            if (command == null)
-            {
+            if (command == null) {
                 break;
             }
             commands.add(command);
@@ -91,5 +45,37 @@ public class CompoundCommand implements Command
 
         }
         return new CompoundCommand(commands);
+    }
+
+    @Override
+    public String getName() {
+        return Opcode.COMPOUND.getName();
+    }
+
+    @Override
+    public boolean getAnnotation() {
+        boolean annotation = false;
+        for (Command command : commands) {
+            annotation |= command.getAnnotation();
+        }
+        return annotation;
+    }
+
+    @Override
+    public int getPreference() {
+        return -1;
+    }
+
+    @Override
+    public List<Fragment> getFragments(boolean annotation) {
+        Collections.sort(commands, comparator);
+        return commands.get(0).getFragments(annotation);
+    }
+
+    @Override
+    public void execute(List<Fragment> fragments, ObjectNode result) {
+        for (Command command : commands) {
+            command.execute(fragments, result);
+        }
     }
 }

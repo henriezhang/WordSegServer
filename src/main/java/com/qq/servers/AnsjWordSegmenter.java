@@ -6,9 +6,7 @@ import org.ansj.domain.Term;
 import org.ansj.recognition.NatureRecognition;
 import org.ansj.splitWord.analysis.ToAnalysis;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /**
  * This class use Ansj word segmenter to segment words
@@ -18,50 +16,7 @@ import java.util.Set;
  * Date: 13-10-13
  * Time: 上午11:04
  */
-public class AnsjWordSegmenter implements WordSegmenter
-{
-
-//    private static Set<String> excludedWords;
-//
-//    static
-//    {
-//        excludedWords = new HashSet<String>();
-//        excludedWords.add("nbsp");
-//        excludedWords.add("lt");
-//        excludedWords.add("gt");
-//        excludedWords.add("amp");
-//        excludedWords.add("quot");
-//        excludedWords.add("apos");
-//    }
-
-
-    public List<Term> segmentWord(String sentence, boolean annotation)
-    {
-        List<Term> parsed = ToAnalysis.parse(sentence);
-        parsed = filterWords(parsed);
-        if (!annotation)
-        {
-            return parsed;
-        }
-        NatureRecognition recognition = new NatureRecognition(parsed);
-        recognition.recognition();
-
-        return parsed;
-    }
-
-    private List<Term> filterWords(List<Term> words)
-    {
-        List<Term> result = Lists.newArrayList();
-        for (Term word : words)
-        {
-            if (!StopWordDict.isStopWord(word.getName()))
-            {
-                result.add(word);
-            }
-        }
-        return result;
-    }
-
+public class AnsjWordSegmenter implements WordSegmenter {
     /**
      * the format of result string is :<p>
      * 1. words separated by black space<p>
@@ -75,23 +30,41 @@ public class AnsjWordSegmenter implements WordSegmenter
      * @param annotation
      * @return
      */
-    protected static String buildResult(List<Term> words, boolean annotation)
-    {
+    protected static String buildResult(List<Term> words, boolean annotation) {
         StringBuilder sb = new StringBuilder();
-        for (Term term : words)
-        {
+        for (Term term : words) {
             sb.append(term.getName());
-            if (annotation)
-            {
+            if (annotation) {
                 sb.append("/");
                 sb.append(term.getNatrue().natureStr);
             }
             sb.append(" ");
         }
-        if (sb.length() > 0)
-        {
+        if (sb.length() > 0) {
             sb.setLength(sb.length() - 1);
         }
         return sb.toString();
+    }
+
+    public List<Term> segmentWord(String sentence, boolean annotation) {
+        List<Term> parsed = ToAnalysis.parse(sentence);
+        parsed = filterWords(parsed);
+        if (!annotation) {
+            return parsed;
+        }
+        NatureRecognition recognition = new NatureRecognition(parsed);
+        recognition.recognition();
+
+        return parsed;
+    }
+
+    private List<Term> filterWords(List<Term> words) {
+        List<Term> result = Lists.newArrayList();
+        for (Term word : words) {
+            if (!StopWordDict.isStopWord(word.getName())) {
+                result.add(word);
+            }
+        }
+        return result;
     }
 }

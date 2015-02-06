@@ -77,7 +77,7 @@
             <artifactId>tree-split</artifactId>
             <version>3.7.0.Final</version>
             <scope>system</scope>
-            <systemPath>C:/Users/henriezhang/IdeaProjects/wordSegServer/lib/tree_split-1.0.1.jar</systemPath>
+            <systemPath>D:/IdeaProjects/WordSegServer/lib/tree_split-1.0.1.jar</systemPath>
         </dependency>
 
         <!--<dependency>-->
@@ -115,7 +115,7 @@
             <artifactId>ansj_seg</artifactId>
             <version>0.9</version>
             <scope>system</scope>
-            <systemPath>C:/Users/henriezhang/IdeaProjects/wordSegServer/lib/ansj_seg-0.9.jar</systemPath>
+            <systemPath>D:/IdeaProjects/WordSegServer/lib/ansj_seg-0.9.jar</systemPath>
         </dependency>
 
         <dependency>

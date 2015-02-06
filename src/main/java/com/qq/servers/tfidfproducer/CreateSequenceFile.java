@@ -15,16 +15,12 @@ import java.io.IOException;
  * Date: 13-10-15
  * Time: 下午7:37
  */
-public class CreateSequenceFile
-{
+public class CreateSequenceFile {
 
 
+    public static void main(String args[]) throws IOException {
 
-    public static void main(String args[]) throws IOException
-    {
-
-        if (args.length != 2)
-        {
+        if (args.length != 2) {
             System.err.println("Usage CreateSequenceFile <input directory> <output path");
             System.exit(1);
         }
@@ -41,7 +37,6 @@ public class CreateSequenceFile
         writer.append(key, example);
 
     }
-
 
 
 }

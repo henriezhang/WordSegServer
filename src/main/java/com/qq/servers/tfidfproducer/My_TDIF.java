@@ -9,12 +9,10 @@ import java.util.regex.Pattern;
  * Date: 13-10-15
  * Time: 下午5:31
  */
-public class My_TDIF
-{
+public class My_TDIF {
 
 
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 //        System.out.println(System.getProperty("java.class.path"));
 //        List<Term> words = ToAnalysis.parse("亚太经合组织");
 //        System.out.println(Arrays.toString(words.toArray()));
@@ -28,13 +26,10 @@ public class My_TDIF
 //        String input = "66";
         String input = "''bitchin'";
         Matcher matcher = pattern.matcher(input);
-        if (matcher.matches())
-        {
+        if (matcher.matches()) {
 
             System.out.println("Matcher!");
-        }
-        else
-        {
+        } else {
             System.out.println("unmatchered");
 
         }

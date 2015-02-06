@@ -9,26 +9,20 @@ import java.util.concurrent.LinkedBlockingQueue;
  * Time: 下午5:57
  */
 
-public class LimitedQueue<E> extends LinkedBlockingQueue<E>
-{
+public class LimitedQueue<E> extends LinkedBlockingQueue<E> {
 
-    public LimitedQueue(int size)
-    {
+    public LimitedQueue(int size) {
         super(size);
 
     }
 
     @Override
-    public boolean offer(E e)
-    {
+    public boolean offer(E e) {
         // turn offer() and add() into a blocking calls (unless interrupted)
-        try
-        {
+        try {
             put(e);
             return true;
-        }
-        catch (InterruptedException ie)
-        {
+        } catch (InterruptedException ie) {
             Thread.currentThread().interrupt();
         }
         return false;

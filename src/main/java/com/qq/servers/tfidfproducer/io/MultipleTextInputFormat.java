@@ -24,63 +24,27 @@ import java.util.List;
  * Date: 13-10-17
  * Time: 下午3:13
  */
-public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
-{
-    @Override
-    public RecordReader<LongWritable, Text> createRecordReader(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException
-    {
-        return new MultiRecordReader();
-    }
-
-
-    private static final PathFilter hiddenFileFilter = new PathFilter()
-    {
-        public boolean accept(Path p)
-        {
+public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text> {
+    private static final PathFilter hiddenFileFilter = new PathFilter() {
+        public boolean accept(Path p) {
             String name = p.getName();
             return !name.startsWith("_") && !name.startsWith(".");
         }
     };
 
-
-    /**
-     * Proxy PathFilter that accepts a path only if all filters given in the
-     * constructor do. Used by the listPaths() to apply the built-in
-     * hiddenFileFilter together with a user provided one (if any).
-     */
-    private static class MultiPathFilter implements PathFilter
-    {
-        private List<PathFilter> filters;
-
-        public MultiPathFilter(List<PathFilter> filters)
-        {
-            this.filters = filters;
-        }
-
-        public boolean accept(Path path)
-        {
-            for (PathFilter filter : filters)
-            {
-                if (!filter.accept(path))
-                {
-                    return false;
-                }
-            }
-            return true;
-        }
+    @Override
+    public RecordReader<LongWritable, Text> createRecordReader(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException {
+        return new MultiRecordReader();
     }
-
 
     //most of the code copy from FileInputFormat,since these classes has visibility of private
     //re-implement following method to recursively list directory.
     @Override
-    protected List<FileStatus> listStatus(JobContext job) throws IOException
-    {
+    protected List<FileStatus> listStatus(JobContext job) throws IOException {
 
         List<FileStatus> result = new ArrayList<FileStatus>();
         Path[] dirs = getInputPaths(job);
-        if (dirs.length == 0)
-        {
+        if (dirs.length == 0) {
             throw new IOException("No input paths specified in job");
         }
 
@@ -95,46 +59,33 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
         List<PathFilter> filters = new ArrayList<PathFilter>();
         filters.add(hiddenFileFilter);
         PathFilter jobFilter = getInputPathFilter(job);
-        if (jobFilter != null)
-        {
+        if (jobFilter != null) {
             filters.add(jobFilter);
         }
         PathFilter inputFilter = new MultiPathFilter(filters);
         FileSystem fs = FileSystem.get(job.getConfiguration());
-        for (Path dir : dirs)
-        {
+        for (Path dir : dirs) {
             listDir(dir, result, fs, inputFilter, errors);
         }
         return result;
     }
 
     private void listDir(Path dir, List<FileStatus> result, FileSystem fs, PathFilter inputFilter,
-                         List<IOException> errors) throws IOException
-    {
+                         List<IOException> errors) throws IOException {
 
         FileStatus[] matches = fs.globStatus(dir, inputFilter);
-        if (matches == null)
-        {
+        if (matches == null) {
             errors.add(new IOException("Input path does not exist: " + dir));
-        }
-        else if (matches.length == 0)
-        {
+        } else if (matches.length == 0) {
             errors.add(new IOException("Input Pattern " + dir + " matches 0 files"));
-        }
-        else
-        {
-            for (FileStatus globStat : matches)
-            {
-                if (globStat.isDir())
-                {
+        } else {
+            for (FileStatus globStat : matches) {
+                if (globStat.isDir()) {
                     for (FileStatus stat : fs.listStatus(globStat.getPath(),
-                            inputFilter))
-                    {
+                            inputFilter)) {
                         listDir(stat.getPath(), result, fs, inputFilter, errors);
                     }
-                }
-                else
-                {
+                } else {
                     result.add(globStat);
                 }
             }
@@ -144,8 +95,7 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
     //TODO
     //take minimum split size into consideration.
     @Override
-    public List<InputSplit> getSplits(JobContext job) throws IOException
-    {
+    public List<InputSplit> getSplits(JobContext job) throws IOException {
         List<InputSplit> fileSplits = super.getSplits(job);
         List<InputSplit> multiSplits = new ArrayList<InputSplit>();
 
@@ -155,20 +105,15 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
         long perSplitSize = 0;
         List<FileSplit> perSplit = new ArrayList<FileSplit>();
 
-        for (InputSplit split : fileSplits)
-        {
-            try
-            {
+        for (InputSplit split : fileSplits) {
+            try {
                 perSplitSize += split.getLength();
-            }
-            catch (InterruptedException e)
-            {
+            } catch (InterruptedException e) {
                 throw new IOException(e);
             }
 
             perSplit.add((FileSplit) split);
-            if (perSplitSize > maxSplitSize)
-            {
+            if (perSplitSize > maxSplitSize) {
 
                 multiSplits.add(new MultipleFileSplit(perSplit));
                 //reset
@@ -177,8 +122,7 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
             }
         }
 
-        if (perSplit.size() > 0)
-        {
+        if (perSplit.size() > 0) {
             multiSplits.add(new MultipleFileSplit(perSplit));
         }
 
@@ -186,13 +130,33 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
     }
 
     @Override
-    protected boolean isSplitable(JobContext context, Path filename)
-    {
+    protected boolean isSplitable(JobContext context, Path filename) {
         return false;
     }
 
-    public static class MultiRecordReader extends RecordReader<LongWritable, Text>
-    {
+    /**
+     * Proxy PathFilter that accepts a path only if all filters given in the
+     * constructor do. Used by the listPaths() to apply the built-in
+     * hiddenFileFilter together with a user provided one (if any).
+     */
+    private static class MultiPathFilter implements PathFilter {
+        private List<PathFilter> filters;
+
+        public MultiPathFilter(List<PathFilter> filters) {
+            this.filters = filters;
+        }
+
+        public boolean accept(Path path) {
+            for (PathFilter filter : filters) {
+                if (!filter.accept(path)) {
+                    return false;
+                }
+            }
+            return true;
+        }
+    }
+
+    public static class MultiRecordReader extends RecordReader<LongWritable, Text> {
         //field:
         private List<FileSplit> fileSplits;
         private TaskAttemptContext context;
@@ -203,8 +167,7 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
         private LineRecordReader reader = null;
 
         @Override
-        public void initialize(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException
-        {
+        public void initialize(InputSplit split, TaskAttemptContext context) throws IOException, InterruptedException {
 
             MultipleFileSplit multipleSplits = (MultipleFileSplit) split;
             fileSplits = multipleSplits.getFileSplits();
@@ -221,10 +184,8 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
          * @param current
          * @throws java.io.IOException
          */
-        private void createReader(int current) throws IOException
-        {
-            if (reader != null)
-            {
+        private void createReader(int current) throws IOException {
+            if (reader != null) {
                 reader.close();
             }
 
@@ -234,54 +195,42 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
 
 
         @Override
-        public boolean nextKeyValue() throws IOException, InterruptedException
-        {
+        public boolean nextKeyValue() throws IOException, InterruptedException {
 
             boolean hasMore = reader.nextKeyValue();
 
-            if (hasMore)
-            {
+            if (hasMore) {
                 return true;
-            }
-            else
-            {
+            } else {
                 //pick next
                 current++;
-                if (current < length)
-                {
+                if (current < length) {
                     createReader(current);
                     return nextKeyValue();
-                }
-                else
-                {
+                } else {
                     return false;
                 }
             }
         }
 
         @Override
-        public LongWritable getCurrentKey() throws IOException, InterruptedException
-        {
+        public LongWritable getCurrentKey() throws IOException, InterruptedException {
             return reader.getCurrentKey();
         }
 
         @Override
-        public Text getCurrentValue() throws IOException, InterruptedException
-        {
+        public Text getCurrentValue() throws IOException, InterruptedException {
             return reader.getCurrentValue();
         }
 
         @Override
-        public float getProgress() throws IOException, InterruptedException
-        {
+        public float getProgress() throws IOException, InterruptedException {
             return (float) current / length;
         }
 
         @Override
-        public void close() throws IOException
-        {
-            if (reader != null)
-            {
+        public void close() throws IOException {
+            if (reader != null) {
                 reader.close();
             }
         }

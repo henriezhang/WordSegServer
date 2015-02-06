@@ -31,57 +31,63 @@ import java.util.concurrent.TimeUnit;
  * <p/>
  * line counter of text file
  */
-public class LineCounterJob extends Configured implements Tool
-{
+public class LineCounterJob extends Configured implements Tool {
 
 
-    public static class LineCounterJobMapper extends Mapper<LongWritable, Text, Text, LongWritable>
-    {
+    public static void main(String args[]) throws Exception {
 
-        private static Text KEY = new Text("key");
-        private long count = 0;
+//        String pathStr = args[0];
 
-        @Override
-        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException
-        {
-            count++;
-            //TODO
-            //need to report progress status
-        }
+//        final String outputDirPrefix = "/user/admin/antyrao/summary/";
 
-        @Override
-        protected void cleanup(Context context) throws IOException, InterruptedException
-        {
-            context.write(KEY, new LongWritable(count));
-        }
+        final Configuration conf = new Configuration();
+        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
+        final String partition = otherArgs[0];
+        String inputPathStr = otherArgs[1];
+        String outputPathStr = otherArgs[2];
+        final FileSystem fs = FileSystem.get(conf);
 
-    }
+        FileStatus[] ids = fs.listStatus(new Path(inputPathStr));
 
 
-    public static class DocumentCounterJobReducer extends Reducer<Text, LongWritable, Text, LongWritable>
-    {
-        @Override
-        protected void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException
-        {
-            //there is only one key, following code should run one time.
-            long sum = 0;
-            for (LongWritable value : values)
-            {
-                sum += value.get();
+        BlockingQueue<Runnable> queue = new LimitedQueue<Runnable>(10);
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 0L, TimeUnit.MILLISECONDS, queue);
+
+        for (FileStatus status : ids) {
+            Path input = new Path(status.getPath(), partition);
+            if (!fs.exists(input)) {
+                continue;
+            }
+            Path outputDir = new Path(outputPathStr, status.getPath().getName());
+
+            if (fs.exists(outputDir)) {
+                fs.delete(outputDir, true);
             }
 
-            context.write(new Text(""), new LongWritable(sum));
+            final String[] args2 = new String[]{input.toString(), outputDir.toString()};
+
+            executor.submit(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        ToolRunner.run(conf, new LineCounterJob(), args2);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            });
+
         }
+
+
     }
 
-
     @Override
-    public int run(String[] args) throws Exception
-    {
+    public int run(String[] args) throws Exception {
         Configuration conf = getConf();
         String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        if (otherArgs.length != 2)
-        {
+        if (otherArgs.length != 2) {
             System.err.println("Usage: DocumentCounter  <InputDir> <OutputDir>");
             System.exit(2);
         }
@@ -110,61 +116,35 @@ public class LineCounterJob extends Configured implements Tool
 //        return 0;
     }
 
-    public static void main(String args[]) throws Exception
-    {
+    public static class LineCounterJobMapper extends Mapper<LongWritable, Text, Text, LongWritable> {
 
-//        String pathStr = args[0];
+        private static Text KEY = new Text("key");
+        private long count = 0;
 
-//        final String outputDirPrefix = "/user/admin/antyrao/summary/";
-
-        final Configuration conf = new Configuration();
-        String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
-        final String partition = otherArgs[0];
-        String inputPathStr = otherArgs[1];
-        String outputPathStr = otherArgs[2];
-        final FileSystem fs = FileSystem.get(conf);
-
-        FileStatus[] ids = fs.listStatus(new Path(inputPathStr));
-
-
-        BlockingQueue<Runnable> queue = new LimitedQueue<Runnable>(10);
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(10, 10, 0L, TimeUnit.MILLISECONDS, queue);
-
-        for (FileStatus status : ids)
-        {
-            Path input = new Path(status.getPath(), partition);
-            if (!fs.exists(input))
-            {
-                continue;
-            }
-            Path outputDir = new Path(outputPathStr, status.getPath().getName());
-
-            if (fs.exists(outputDir))
-            {
-                fs.delete(outputDir, true);
-            }
-
-            final String[] args2 = new String[]{input.toString(), outputDir.toString()};
-
-            executor.submit(new Runnable()
-            {
-                @Override
-                public void run()
-                {
-                    try
-                    {
-                        ToolRunner.run(conf, new LineCounterJob(), args2);
-                    }
-                    catch (Exception e)
-                    {
-                        e.printStackTrace();
-                    }
-
-                }
-            });
-
+        @Override
+        protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+            count++;
+            //TODO
+            //need to report progress status
         }
 
+        @Override
+        protected void cleanup(Context context) throws IOException, InterruptedException {
+            context.write(KEY, new LongWritable(count));
+        }
 
+    }
+
+    public static class DocumentCounterJobReducer extends Reducer<Text, LongWritable, Text, LongWritable> {
+        @Override
+        protected void reduce(Text key, Iterable<LongWritable> values, Context context) throws IOException, InterruptedException {
+            //there is only one key, following code should run one time.
+            long sum = 0;
+            for (LongWritable value : values) {
+                sum += value.get();
+            }
+
+            context.write(new Text(""), new LongWritable(sum));
+        }
     }
 }

@@ -13,14 +13,12 @@ import java.util.regex.Pattern;
  * <p/>
  * filter which only keep meaningful word in respect to Key Word of a document.
  */
-public class MeanWordFilter implements WordFilter
-{
+public class MeanWordFilter implements WordFilter {
 
     private Pattern pattern = Pattern.compile("(?s)[\\d|%|']");
 
     @Override
-    public boolean accept(Object wordObj)
-    {
+    public boolean accept(Object wordObj) {
         Term word = (Term) wordObj;
 
         if (word.getName().trim().length() < 2)
