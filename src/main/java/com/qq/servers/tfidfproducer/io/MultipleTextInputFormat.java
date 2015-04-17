@@ -1,5 +1,6 @@
 package com.qq.servers.tfidfproducer.io;
 
+import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileStatus;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -63,7 +64,8 @@ public class MultipleTextInputFormat extends FileInputFormat<LongWritable, Text>
             filters.add(jobFilter);
         }
         PathFilter inputFilter = new MultiPathFilter(filters);
-        FileSystem fs = FileSystem.get(job.getConfiguration());
+        Configuration conf = job.getConfiguration();
+        FileSystem fs = FileSystem.get(conf);
         for (Path dir : dirs) {
             listDir(dir, result, fs, inputFilter, errors);
         }

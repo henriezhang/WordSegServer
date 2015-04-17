@@ -21,7 +21,7 @@ public class WordSegServer {
     }
 
     public static void main(String[] args) {
-        int port = 8083;
+        int port = 8081;
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         }

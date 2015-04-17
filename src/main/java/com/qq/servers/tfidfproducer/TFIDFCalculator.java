@@ -163,6 +163,10 @@ public class TFIDFCalculator {
         idfDicts.put("default", new IdfDict("idf.txt"));
         idfDicts.put("auto", new IdfDict("auto.idf"));
         idfDicts.put("finance", new IdfDict("finance.idf"));
+
+        //idfDicts.put("default", new IdfDict("D:\\ProjectsJava\\WordSegServer\\conf\\idf.txt"));
+        //idfDicts.put("auto", new IdfDict("D:\\ProjectsJava\\WordSegServer\\conf\\auto.idf"));
+        //idfDicts.put("finance", new IdfDict("D:\\ProjectsJava\\WordSegServer\\conf\\finance.idf"));
     }
 
     public static void main(String[] args) {
